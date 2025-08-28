@@ -69,7 +69,8 @@ export default function App() {
   const [activeFeature, setActiveFeature] = useState(0)
   const [isSticky, setIsSticky] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
 
   useEffect(() => {
     const handleScroll = () => {
